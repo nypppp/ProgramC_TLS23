@@ -2,6 +2,7 @@
 using namespace std;
 
 int main() {
+    while (true){
     int choice;
     int choice_switch;
     double value;
@@ -11,8 +12,14 @@ int main() {
     cout << "1. Length " << endl;
     cout << "2. Weight" << endl;
     cout << "3. Temperature" << endl;
+    cout << "4. Exit" << endl ;
     cout << "Your choice: ";
     cin >> choice;
+
+        if (choice == 4){
+    break; 
+    }
+    
 
     if (choice == 1) {
         cout << "1. meter to feet (m to ft)" << endl;
@@ -53,7 +60,7 @@ int main() {
 
             default:
                 cerr << "error: only exist four choices" << endl;
-                return 1;
+               
         }
     }
 
@@ -108,6 +115,6 @@ int main() {
                 cerr << "error: only exist two choices" << endl;
         }
     }
-   system("pause"); 
+  }
     return 0;
 }
