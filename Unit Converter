@@ -1,0 +1,113 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    int choice_switch;
+    double value;
+    double result;
+
+    cout << "Your choices: " << endl;
+    cout << "1. Length " << endl;
+    cout << "2. Weight" << endl;
+    cout << "3. Temperature" << endl;
+    cout << "Your choice: ";
+    cin >> choice;
+
+    if (choice == 1) {
+        cout << "1. meter to feet (m to ft)" << endl;
+        cout << "2. feet to meter (ft to m)" << endl;
+        cout << "3. inches to centi (inch to cm)" << endl;
+        cout << "4. centi to inches (cm to inch)" << endl;
+        cout << "Your choice: ";
+        cin >> choice_switch;
+
+        switch (choice_switch) {
+            case 1:
+                cout << "Enter length in meter: ";
+                cin >> value;
+                result = value * 3.28084;
+                cout << "is: " << result << " ft" << endl;
+                break;
+
+            case 2:
+                cout << "Enter length in feet: ";
+                cin >> value;
+                result = value / 3.28084;
+                cout << "is: " << result << " m" << endl;
+                break;
+
+            case 3:
+                cout << "Enter length in inches: ";
+                cin >> value;
+                result = value * 2.54;
+                cout << "is: " << result << " cm" << endl;
+                break;
+
+            case 4:
+                cout << "Enter length in inches: ";
+                cin >> value;
+                result = value / 2.54;
+                cout << "is: " << result << " inch" << endl;
+                break;
+
+            default:
+                cerr << "error: only exist four choices" << endl;
+                return 1;
+        }
+    }
+
+    if (choice == 2) {
+        cout << "1. kilograms to pounds (kg to lb)" << endl;
+        cout << "2. pounds to kilograms (lb to kg)" << endl;
+        cout << "Your choice: ";
+        cin >> choice_switch;
+
+        switch (choice_switch) {
+            case 1:
+                cout << "Enter weight in kilograms: ";
+                cin >> value;
+                result = value * 2.20462;
+                cout << "is: " << result << " lb" << endl;
+                break;
+
+            case 2:
+                cout << "Enter weight in pounds: ";
+                cin >> value;
+                result = value / 2.20462;
+                cout << "is: " << result << " kg" << endl;
+                break;
+
+            default:
+                cerr << "error: only exist two choices" << endl;
+        }
+    }
+
+    if (choice == 3) {
+        cout << "1. Celsius to Fahrenheit (°C to °F)" << endl;
+        cout << "2. Fahrenheit to Celsius (°F to °C)" << endl;
+        cout << "Your choice: ";
+        cin >> choice_switch;
+
+        switch (choice_switch) {
+            case 1:
+                cout << "Enter temperature in Celsius: ";
+                cin >> value;
+                result = value * 9 / 5 + 32;
+                cout << "is: " << result << "° F" << endl;
+                break;
+
+            case 2:
+                cout << "Enter temperature in Fahrenheit: ";
+                cin >> value;
+                result = (value - 32) * 5 / 9;
+                cout << "is: " << result << "° C" << endl;
+                break;
+
+            default:
+                cerr << "error: only exist two choices" << endl;
+        }
+    }
+   system("pause"); 
+    return 0;
+}
